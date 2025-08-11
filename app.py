@@ -50,5 +50,10 @@ def api_palette():
     return jsonify({'colors': colors})
 
 
+@app.route('/')
+def index():
+    
+    return redirect(url_for('poll_page'))
+
 if __name__ == '__main__':
     app.run(debug=True)
