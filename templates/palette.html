@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container palette-container">
+        <h1>Color Palette Generator</h1>
+        <p>Click the button to generate a random 5-color palette!</p>
+        
+        <button id="generate-btn" class="btn btn-generate">Generate New Palette</button>
+
+        <div id="palette-container" class="palette">
+            </div>
+        
+        <div class="nav-link">
+            <a href="{{ url_for('poll_page') }}">← Back to the Poll App</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

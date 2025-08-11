@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Poll App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container poll-container">
+        <h1>{{ poll.question }}</h1>
+
+        <div class="poll-options">
+            <div class="option">
+                <button id="vote-cats-btn" data-vote="cats" class="btn btn-vote">{{ poll.options.cats }}</button>
+                <p>Votes: <span id="cats-votes">{{ poll.votes.cats }}</span></p>
+            </div>
+
+            <div class="option">
+                <button id="vote-dogs-btn" data-vote="dogs" class="btn btn-vote">{{ poll.options.dogs }}</button>
+                <p>Votes: <span id="dogs-votes">{{ poll.votes.dogs }}</span></p>
+            </div>
+        </div>
+        
+        <div class="nav-link">
+            <a href="{{ url_for('palette_page') }}">Try the Color Palette Generator 🎨</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
